@@ -16,6 +16,5 @@
             })
             .otherwise({redirectTo: '/dashboard'});
     });
-
     
 })();

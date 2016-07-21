@@ -1,16 +1,33 @@
 
 <!--//cart view-->
 <div>
-    <div data-ng-repeat="product in products  | orderBy : 'quantity'" class="col-lg-6 col-md-8 col-sm-10 col-xs-12 well">
+    <div class="inCart cart col-lg-6 col-md-8 col-sm-10 col-xs-12 well">
+        <div class="cartDetail item col-lg-4 title">
+            Item
+        </div>
+        <div class="cartDetail quantity col-lg-2 title">
+            Quantity
+        </div>
+        <div class="cartDetail cost col-lg-2 title">
+            Price
+        </div>
+    </div>
+
+    <div data-ng-repeat="product in products | filter:filterCart" class="cart col-lg-6 col-md-8 col-sm-10 col-xs-12 well">
         <div class="inCart">
-            <div class="detail item">
-                {{product.title}}
+            <div class="cartDetail item col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <img data-ng-src="{{product.cover}}"/> {{product.title}}
             </div>
-            <div class="detail quantity">
+            <div class="cartDetail quantity col-lg-2 col-md-2 col-sm-2 col-xs-2">
                 {{product.quantity}}
             </div>
-            <div class="detail cost">
-                {{product.price}}
+            <div class="cartDetail cost col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                {{product.price | currency}}
+            </div>
+            <div class="cartDetail col-lg-2">
+                <button type="button" class="btn btn-success" data-ng-click="plusOne(product)">+</button>
+                <button type="button" class="btn btn-danger" data-ng-click="minusOne(product)">-</span></button>
+                <button type="button" class="btn btn-primary" data-ng-click="deleteItem(product)">x</span></button>
             </div>
         </div>
     </div>

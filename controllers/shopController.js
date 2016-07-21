@@ -107,14 +107,37 @@
             }
 
         ];
+
+        if (localStorage.getItem('products')){
+            $scope.products = JSON.parse(localStorage.getItem('products'));
+        }
         $scope.addToCart = function(p){
             p.inCart = true;
+            localStorage.removeItem('products');
+            localStorage.setItem('products', JSON.stringify($scope.products));
 
         };
         $scope.plusOne = function(p){
             p.quantity ++;
-            
-        }
+            localStorage.removeItem('products');
+            localStorage.setItem('products', JSON.stringify($scope.products));
+        };
+        $scope.minusOne = function(p){
+            if(p.quantity>1) {
+                p.quantity--;
+                localStorage.removeItem('products');
+                localStorage.setItem('products', JSON.stringify($scope.products));
+            }
+        };
+        $scope.deleteItem = function(p){
+                p.quantity=0;
+                localStorage.removeItem('products');
+                localStorage.setItem('products', JSON.stringify($scope.products));
+        };
+        $scope.filterCart = function(item)
+        {
+            return (item.quantity !== 0);
+        };
     }
     angular.module('myApp').controller('shopController', ['$scope', shopController]);
 })();

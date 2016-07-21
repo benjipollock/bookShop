@@ -72,3 +72,19 @@ html, body {
     left: 40px;
     z-index: 1;
 }
+.cart{
+    margin: 0 20% 1px 20%;
+}
+.cartDetail{
+    display: inline-block;
+    text-align: center;
+}
+.cartDetail button{
+    width:20px;
+    height:20px;
+    padding: 0 0 0 0;
+    display:inline-block;
+}
+.cartDetail img{
+    height: 50px;
+}

@@ -11,19 +11,19 @@
             </button>
             <a class="navbar-brand" href="#">BookStore!!</a>
             <ul class="nav navbar-nav navbar-left">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort by: <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Title</a></li>
-                        <li><a href="#">Author</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort by: <span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Title</a></li>-->
+                        <!--<li><a href="#">Author</a></li>-->
+                        <!--<li role="separator" class="divider"></li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li role="separator" class="divider"></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
                 <form class="navbar-form navbar-left" role="search">
-                    Search by title: <input type="text" class="form-control" placeholder="Search" data-ng-model="filterByTitle">
+                    Search by title: <input type="text" class="form-control" placeholder="Search" data-ng-model="$parent.search.title">
                 </form>
             </ul>
         </div>
