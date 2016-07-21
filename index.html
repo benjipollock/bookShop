@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/shop.css"/>
+    <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.7/angular-route.js"></script>
+    <!--Modules-->
+    <script src="app.js"></script>
+    <!--Controllers-->
+    <script src="controllers/shopController.js"></script>
+    <!--Directives-->
+</head>
+<body data-ng-app="myApp">
+
+<div data-ng-include="'partials/navbar.html'"></div>
+<div data-ng-view></div>
+
+</body>
+</html>
+<!--| filter:{'inCart':true}}-->

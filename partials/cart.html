@@ -1,0 +1,17 @@
+
+<!--//cart view-->
+<div>
+    <div data-ng-repeat="product in products  | orderBy : 'quantity'" class="col-lg-6 col-md-8 col-sm-10 col-xs-12 well">
+        <div class="inCart">
+            <div class="detail item">
+                {{product.title}}
+            </div>
+            <div class="detail quantity">
+                {{product.quantity}}
+            </div>
+            <div class="detail cost">
+                {{product.price}}
+            </div>
+        </div>
+    </div>
+</div>

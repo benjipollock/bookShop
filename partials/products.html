@@ -1,0 +1,30 @@
+<!--//product view     orderBy : 'author'-->|
+<div class="productsContainer">
+    <div data-ng-repeat="product in products | filter : {title : filterByTitle} | orderBy : 'author' " class='product col-lg-2 col-md-3 col-sm-6 col-xs-12 well'>
+        <div class="price">
+            {{product.price | currency}}
+        </div>
+        <div class="image">
+            <img data-ng-src="{{product.cover}}"/>
+        </div>
+        <div class="title">
+            {{product.title}}
+        </div>
+        <div class="author">
+            {{product.author}}
+        </div>
+        <div class="publication">
+            {{product.publication | date}}
+        </div>
+        <div class="publication">
+            {{product.quantity}}
+        </div>
+        <div>
+            <button type="button" class="btn btn-default" data-ng-click="addToCart(product); plusOne(product)">Add to cart<span class="glyphicon glyphicon-shopping-cart"></span></button>
+        </div>
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>

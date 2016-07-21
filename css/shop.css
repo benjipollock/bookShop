@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    width:100%;
+    background-color: forestgreen;
+}
+.productsContainer{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.product{
+    height: 380px;
+    width: 275px;
+    border: black solid 1px;
+    position: relative;
+    text-align:center;
+    margin: 2px 2px 2px 2px;
+    display:inline-block;
+
+}
+.image {
+    text-align: center;
+    border: 0px;
+    position: relative;
+    padding: 10px;
+    border-radius: 0;
+    margin-bottom:10px;
+}
+
+.image img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.title,
+.publication {
+    color: #444;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.publication {
+    color: #a3a3a3 ;
+    font-size: 14px;
+    font-weight: 200;
+
+}
+.author{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+
+}
+.price {
+    text-align: center;
+    background-color: forestgreen;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-weight: 200;
+    height: 70px;
+    line-height: 70px;
+    width: 80px;
+    position: absolute;
+    top: 5px;
+    left: 40px;
+    z-index: 1;
+}
